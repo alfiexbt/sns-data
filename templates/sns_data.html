@@ -33,7 +33,6 @@ Sales Information
 <div class="container mt-4">
     <div id="last_sales" style="display: none;">
         <h2>Last 200 Sales</h2>
-        <p style="color: red;">Prices rounded to tenths</p>
 
         <table class="table table-striped">
             <thead>
@@ -84,8 +83,8 @@ Sales Information
 
 
     <div id="registrations" style="display: none;">
-        <h2>Recent Registrations (30 days) </h2>
-        <p style="color: red;">Prices may fluctuate due to rarity of domains </p>
+        <h2>Registrations</h2>
+        <p style="color: red;">Over the last 30 days </p>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -153,15 +152,17 @@ Sales Information
     </div>
     <div id="categories" style="display: none;">
         <h2>Category Statistics</h2>
+         <p style="color: red;">Over the last 6 months </p>
         <table class="table table-striped">
             <thead>
             <tr>
                 <th>Category<br>Name</th>
-                <th>Minimum<br>Sale (USD)</th>
-                <th>Maximum<br>Sale (USD)</th>
-                <th>Average<br>Price (USD)</th>
-                <th>Volume (USD)</th>
-                <th>Owners</th>g
+                <th>Category<br>Link</th>
+                <th>Min Sale<br>(USD)</th>
+                <th>Max Sale<br>(USD)</th>
+                <th>Average<br>(USD)</th>
+                <th>Volume<br> (USD)</th>
+                <th>Owners</th>
                 <th>Supply</th>
             </tr>
             </thead>
@@ -170,17 +171,22 @@ Sales Information
             {% for category in categories['result'] %}
             <tr>
                 <td>{{ category['category_name'] }}</td>
-                <td>{{ category['min_sale'] }}</td>
-                <td>{{ category['max_sale'] }}</td>
-                <td>{{ category['avg_price'] }}</td>
-                <td>{{ category['volume'] }}</td>
+                <td>
+                    <a href="https://www.sns.id/category?category={{ category['category_name'] }}"
+                    target="_blank">View Category</a>
+                </td>
+                <td>${{ category['min_sale'] }}</td>
+                <td>${{ category['max_sale'] }}</td>
+                <td>${{ category['avg_price'] }}</td>
+                <td>${{ category['volume'] }}</td>
                 <td>{{ category['owners'] }}</td>
                 <td>{{ category['supply'] }}</td>
             </tr>
             {% endfor %}
+            <br>
             {% else %}
             <tr>
-                <td colspan="7">No data available</td>
+                <td colspan="8">No data available</td>
             </tr>
             {% endif %}
             </tbody>
