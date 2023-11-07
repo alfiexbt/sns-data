@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Alfie's SNS Data{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1 class="display-4">Solana Naming Service Data</h1>
+        <p class="lead">SNS is a domain service on the Solana Blockchain. As a side project, I've decided
+            to use the naming service API to query and display some key metrics on the next page. Enjoy</p>
+        <hr class="my-4">
+        <p></p>
+        <a class="btn btn-warning btn-lg" href="{{ url_for('display_sns_data') }}" role="button">Take me there</a>
+    </div>
+</div>
+
+{% endblock %}
+
+
