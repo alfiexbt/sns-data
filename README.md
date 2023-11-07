@@ -1,1 +1,6 @@
-# sns-data
+With this short project, my aim is to focus on displaying some skills I've learned over the last couple of weeks - reading documentation, calling API's, querying data through the backend and displaying the data in a nice, readable way on the frontend. In this project, I used a python/flask stack with jinja templating to demonstrate these skills. The digital asset industry is a space that I'm interested in, so I made my focus domain names on the blockchain Solana. 
+
+SNS background:  
+Solana Name Service provides decentralized and affordable way to map domain names (represented as .sol) to on-chain data. Where on-chain data can be anything from a Solana (SOL) address to IPFS CID, images, text, and more. One of the clear benefits of the name service is a human-readable name that maps to a SOL address. Essentially, it creates an identity for users on-chain and is most commonly known to facilitate crypto payments. Naming is a convention that we are all used to. You dial your contacts and do not type in a phone number every time. We talk about things and people by referring to their names; Solana and blockchains for that matter shouldn't be any different.
+
+https://sns.guide/sns-api/index.html - API docs can be found here.
